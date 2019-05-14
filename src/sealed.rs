@@ -6,7 +6,7 @@ use rust_sodium::crypto::box_::{
 use serde::{de::DeserializeOwned, Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, PartialEq, Clone, Debug)]
-pub struct Sealed<T: Serialize + DeserializeOwned> {
+pub struct Sealed<T> {
     /// Public key of sender.
     source_pk: PublicKey,
     nonce: Nonce,
